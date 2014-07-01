@@ -1,8 +1,7 @@
 header
-  article
-    .logo
-      h1
-        a href="#" WorldCup
+
+ h1
+  a href="#" WorldCup
 
 section#main
   = outlet

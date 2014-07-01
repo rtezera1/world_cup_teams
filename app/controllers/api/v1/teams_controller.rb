@@ -1,4 +1,4 @@
-class Api::V1::LeadsController < ApplicationController
+class Api::V1::TeamsController < ApplicationController
   respond_to :json 
 
   def index

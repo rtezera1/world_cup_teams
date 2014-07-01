@@ -7,8 +7,8 @@ App.Router.reopen({
 });
 
 App.Router.map(function() {
-  this.resource('teams', { path: '/'});
-  
-  // this.resource('posts');
+  this.resource('teams', { path: '/'}, function() {
+    this.resource('team', { path: '/teams/:id'});
+  });
 });
 
