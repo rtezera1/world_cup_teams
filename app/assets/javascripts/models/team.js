@@ -10,3 +10,7 @@ App.Team = DS.Model.extend({
 
 
 });
+
+App.Team.reopenClass({
+  QUALIFIED: [ 'Yes','No']
+});

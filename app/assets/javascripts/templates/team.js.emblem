@@ -4,3 +4,12 @@ p = model.country
 
 p Continent: 
 p = model.continent 
+
+p Qualified:
+view Ember.Select content=App.Team.QUALIFIED value=model.qualified
+
+p Comment:
+view Ember.TextArea value=model.comment
+
+p
+  input type='submit' value='update' click='update'
