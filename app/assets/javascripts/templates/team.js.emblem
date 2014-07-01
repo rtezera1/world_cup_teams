@@ -1,0 +1,6 @@
+h1= model.countryContinent
+p Country:
+p = model.country 
+
+p Continent: 
+p = model.continent 
