@@ -1,10 +1,9 @@
+article#teams
   h1 Teams
   ul
     each team in controller
-      li = link-to "team" team
-       team.countryContinent
+      link-to 'team' team tageName='li'
+        team.countryContinent
 
-
-  outlet
-
+outlet
 

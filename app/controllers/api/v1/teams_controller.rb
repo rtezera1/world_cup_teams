@@ -28,6 +28,6 @@ class Api::V1::TeamsController < ApplicationController
   end
 
   def team_params
-    params.require(:team).permit(:country, :continent)
+    params.require(:team).permit(:country, :continent, :qualified, :comment)
   end
 end

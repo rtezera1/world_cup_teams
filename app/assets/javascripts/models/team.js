@@ -4,6 +4,10 @@ App.Team = DS.Model.extend({
 
   continent: DS.attr('string'),
 
+  qualified: DS.attr('string'),
+
+  comment: DS.attr('string'),
+
   countryContinent: function()  {
     return this.get('country') + ', ' + this.get('continent')
   }.property('country', 'continent')

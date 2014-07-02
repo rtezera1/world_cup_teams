@@ -1,0 +1,26 @@
+article#team
+
+  h1
+    model.countryContinent
+
+  form
+    fieldset
+      dl
+        dt: label Country:
+        dd: view Ember.TextField value=model.country
+
+      dl
+        dt: label Continent:
+        dd: view Ember.TextField value=model.continent
+
+      dl
+        dt: label Qualified:
+        dd: view Ember.TextField value=model.qualified
+
+      dl
+        dt: label Comment:
+        dd: view Ember.TextField value=model.comment
+
+    fieldset.actions
+      input type='submit' value='Edit' click='edit'
+      a.cancel href='#' click='cancel' cancel

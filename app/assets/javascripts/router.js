@@ -7,8 +7,10 @@ App.Router.reopen({
 });
 
 App.Router.map(function() {
-  this.resource('teams', { path: '/'}, function() {
-    this.resource('team', { path: '/teams/:id'});
-  });
+  this.resource('teams', { path: '/' }, function() {
+    this.route('new');
+    this.resource('team', { path: '/teams/:id' }, function() {
+      this.route('edit');
+    })
+  })
 });
-

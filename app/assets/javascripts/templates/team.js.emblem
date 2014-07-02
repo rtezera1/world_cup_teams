@@ -1,15 +1,32 @@
-h1= model.countryContinent
-p Country:
-p = model.country 
+outlet
 
-p Continent: 
-p = model.continent 
+unless isEditing
 
-p Qualified:
-view Ember.Select content=App.Team.QUALIFIED value=model.qualified
+  article#team
+    h1
+      model.countryContinent
+      link-to 'edit' 'team.edit' model classNames='edit'
 
-p Comment:
-view Ember.TextArea value=model.comment
+    p
 
-p
-  input type='submit' value='update' click='update'
+      ' Country:
+      model.country
+
+    p
+      ' Continent:
+      model.continent
+
+    p
+      label Qualified:
+      '
+      view Ember.Select content=App.Team.QUALIFIED value=model.qualified
+
+    p
+      label Comment:
+      br
+      view Ember.TextArea value=model.comment
+
+    p
+      input type='submit' value='Completed' click='completed'
+      a.delete href='#' click="delete" delete
+      
