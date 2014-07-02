@@ -1,7 +1,11 @@
 article#teams
-  h1 Teams
+ 
+  h1
+   | Teams
+   link-to 'teams.new' | New Team
+  view Ember.TextField value=search placeholder='search' classNames='search'
   ul
-    each team in controller
+    each team in teams
       link-to 'team' team tageName='li'
         team.countryContinent
 

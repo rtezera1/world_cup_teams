@@ -16,5 +16,9 @@ App.Team = DS.Model.extend({
 });
 
 App.Team.reopenClass({
-  QUALIFIED: [ 'Yes','No']
+  QUALIFIED: [ 'Yes','No'],
+
+  valid: function(fields) {
+    return fields.country && fields.continent
+  }
 });

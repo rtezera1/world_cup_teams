@@ -1,0 +1,18 @@
+article#team
+
+  h1 New Team
+  
+  if showError
+    .error Leads must have a first and last name.
+  form
+    fieldset
+      dl
+        dt: label Country:
+        dd: view Ember.TextField value=fields.country
+
+      dl
+        dt: label Continent:
+        dd: view Ember.TextField value=fields.continent
+    
+    fieldset.actions
+      input type='submit' value='Make That Team Bro' click='makeThatTeamBro'
